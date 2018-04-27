@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	body
+	{
+		background-color: #DF1D20;
+	}
+	h1
+	{
+		font-family:aladin;
+		text-align: center;
+		color:#FFFFFF;
+		font-size: 70px;
+	}
+	h3
+	{
+		color: black;
+	}
+	p
+	{
+		font-size: 35px;
+		color: black;
+	}
+	ul
+	{
+		list-style-type: circle;
+	}
+	div
+	{
+		<!--box-sizing: padding-box;-->
+		-webkit-animation: letter 4s;
+		animation: letter 4s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		font-size: 50px;
+		color: white;
+		margin-top: 200px;
+		display: inline;
+		position: relative;
+	}
+	
+	#div1 {-webkit-animation-timing-function: ease;}
+	#div2 {-webkit-animation-timing-function: linear;}
+	#div3 {-webkit-animation-timing-function: ease-in;}
+	#div4 {-webkit-animation-timing-function: ease-in-out;}
+	#div5 {-webkit-animation-timing-function: ease-out;}
+	#div6 {-webkit-animation-timing-function: linear;}
+	#div7 {-webkit-animation-timing-function: ease-in-out;}
+	#div8 {-webkit-animation-timing-function: ease-out;}
+	#div9 {-webkit-animation-timing-function: ease-in;}
+	#div10 {-webkit-animation-timing-function: ease;}
+	
+	#div1 {animation-timing-function: ease;}
+	#div2 {animation-timing-function: linear;}
+	#div3 {animation-timing-function: ease-in;}
+	#div4 {animation-timing-function: ease-in-out;}
+	#div5 {animation-timing-function: ease-out;}
+	#div6 {animation-timing-function: linear;}
+	#div7 {animation-timing-function: ease-in-out;}
+	#div8 {animation-timing-function: ease-out;}
+	#div9 {animation-timing-function: ease-in;}
+	#div10 {animation-timing-function: ease;}
+	
+	@-webkit-keyframes letter
+	{
+		from {left: 0px;}
+		to {left:350px;}
+	}
+	@keyframes letter
+	{
+		from {left: 0px;}
+		to {left:250px;}
+	}
+</style>
+</head>
+
+<body>
+{% for l in content %}
+<p>
+	{% for i in l %}
+		<div id="div{{ forloop.counter }}">{{ i }}</div>
+	{% endfor %}
+</p>
+{% endfor %}
+
+<form method="POST">
+	{{ form }}
+</form>
+</body>
+</html>
