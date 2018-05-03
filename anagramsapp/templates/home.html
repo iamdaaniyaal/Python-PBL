@@ -71,9 +71,12 @@
 <br><br>
 
 <!-- <input type="submit" value="Begin Game" onclick="window.location.href='/first"> -->
-<button>Begin Game</button>
-<a href="/first">hi</a>
+<!-- <button>Begin Game</button> -->
 
+
+	<button  onclick="window.location = '{% url 'first' %}' " type="button">Begin Game</button>
+
+<!-- <a href="/first">hi</a> -->
 </body>
 
 </html>
