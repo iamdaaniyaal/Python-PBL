@@ -9,13 +9,13 @@ import enchant
 # Create your views here.
 
 def index(request):
-	f=open('source.txt',"r")
+	'''f=open('source.txt',"r")
 	content=f.readlines()
 	print(content)
 	context={'content': content}
 	
-	# template = loader.get_template('index.html')
-	return render(request, 'home.html', context)
+	# template = loader.get_template('index.html')'''
+	return render(request, 'home.html')
 
 	# return HttpResponse(template.render(context))
 
@@ -79,7 +79,6 @@ def first(request):
 	form = First()
 	if request.method == 'POST':
 		form = First(request.POST)
-
 		if form.is_valid():
 			ip = form.cleaned_data['answer']
 			# var = list(logic(ip))
@@ -100,8 +99,8 @@ def first(request):
 					score = c
 				else:
 					score = 0
-		print(q)
-		print(score)
+		#print(q)
+		#print(score)
 
 		# pk = pk+1
 
