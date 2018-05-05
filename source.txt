@@ -1,3 +1,8 @@
 fseaethaerqc
 gmovridceoa
 klgcvvisttgen
+	<!-- <button onclick="window.location = '{% url 'first' %}' " type="button" align >Submit</button> -->
+<form method="POST" action="/1/">
+
+
+return render(request, 'first.html', {'form':form , 'content':q, 'score':score, 'id':id+1})

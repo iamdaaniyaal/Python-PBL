@@ -144,19 +144,19 @@
 {% endfor %}
 
 
-	<form method="POST" action="/1/">
+	<form method="POST" action="{% url 'first' id=id %}">
 
 	{% csrf_token %}
 
 <p align="center"> {{ form }}  </p>
 	
-<p align="center"> {{ score }} </p>
+
 	<input align="center" type="submit" value="Submit"/>
 
-	<!-- <button onclick="window.location = '{% url 'first' %}' " type="button" align >Submit</button> -->
 </form>
 
-
+<p align="center">Your score is  {{ score }} </p>
+<p> {{ id }}</p>
 
 </body>
 </html>
