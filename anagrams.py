@@ -31,9 +31,11 @@ for i in con:
     for ch in ip:
         if (ch in q):
             flag = True
+            print(flag)
         else:
             flag = False
-            if (flag == False):
+            print(flag)
+            if flag == False:
                 break
 
     # print(flag)

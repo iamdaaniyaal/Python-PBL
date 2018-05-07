@@ -22,8 +22,11 @@ from anagramsapp import views
 
 urlpatterns = [
 	path('',views.index,name='index'),
-	path('1/<int:id>/',views.first,name='first'),
+	path('1/<slug:id>/',views.first,name='first'),
+	path('1/<slug:id>/',views.first1,name='first1'),
+	path('done/',views.done,name='done'),
 	# path('2/',views.second,name='second'),
+	# path('1/',views.first,name='first'),
     path('admin/', admin.site.urls),
 
     
