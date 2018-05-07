@@ -90,6 +90,7 @@ def first(request,id):
 	form = First()
 	if request.method == 'POST':
 		form = First(request.POST)
+<<<<<<< HEAD
 		if form.is_valid():
 			ip = form.cleaned_data['answer']
 			# var = list(logic(ip))
@@ -164,6 +165,8 @@ def first1(request,id):
 	form = First()
 	if request.method == 'POST':
 		form = First(request.POST)
+=======
+>>>>>>> fdcf26859832fc2ace3786be46a62b53d0e97353
 		if form.is_valid():
 			ip = form.cleaned_data['answer']
 			# var = list(logic(ip))
@@ -193,10 +196,15 @@ def first1(request,id):
 					a="It is an Anagram"
 				else:
 					score = 0
+<<<<<<< HEAD
 					a="Not a Anagram"
 					return render(request, 'final.html')
 		#print(q)
 		print(score)
+=======
+		#print(q)
+		#print(score)
+>>>>>>> fdcf26859832fc2ace3786be46a62b53d0e97353
 
 		# pk = pk+1
 
