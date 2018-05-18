@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Anagrams</title>
+<style>
+	body
+	{
+		background-color:#8CE0FF;
+	}
+	h1
+	{
+		font-family:baumans;
+		text-align: center;
+		color:#023BBF;
+		font-size: 70px;
+	}
+	h3
+	{
+		color: black;
+	}
+	p
+	{
+		font-size: 35px;
+		color: black;
+	}
+	ul
+	{	list-style-type: circle;
+
+		/*text-align: center;*/
+
+	}
+	/*li{
+		text-align: center;
+	}*/
+	button
+	{
+		box-sizing: padding-box;
+		width: 150px;
+		height: 50px;
+		animation-name: but_color;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		border-radius: 4px;
+		margin-left:580px;
+		font-size: 18px;
+		cursor: pointer;
+		text-align: center;
+		box-shadow: 2px 2px 2px gray;
+	}
+	@keyframes but_color
+	{
+		0% {background-color: #7AC7FF;}
+
+		50% {background-color:#023BBF;}
+
+		100% {background-color:#4BA6FB;}
+	}
+</style>
+</head>
+
+<body>
+
+<h5>Thank You!!!</h5>
+
+<br><br>
+
+<!-- <input type="submit" value="Begin Game" onclick="window.location.href='/first"> -->
+<!-- <button>Begin Game</button> -->
+
+
+	<button  onclick="window.location = '{% url 'index' %}' " type="button">Play Again</button>
+
+<!-- <a href="/first">hi</a> -->
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style>
+	body
+	{
+		background-color:#296C84;
+		margin-top: 150px;
+	}
+	h1
+	{
+		font-family:aladin;
+		text-align: center;
+		color:black;
+		font-size: 70px;
+	}
+	h3
+	{
+		color: black;
+	}
+	p
+	{
+		font-size: 35px;
+		color: black;
+	}
+	ul
+	{
+		list-style-type: circle;
+	}
+	div
+	{
+		box-sizing: padding-box;
+		-webkit-animation: letter 2s;
+		animation: letter 2s;
+		-webkit-animation-fill-mode: forwards;
+		animation-fill-mode: forwards;
+		font-size: 50px;
+		color: black;
+		margin-top: 200px;
+		display: inline;
+		position: relative;
+		margin-top: 150px;
+		text-shadow: 2px 2px 2px black;
+	}
+	input[type=submit]
+	{
+
+		box-sizing: padding-box;
+		width: 150px;
+		height: 50px;
+		animation-name: but_color;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		border-radius: 4px;
+		margin-left:600px;
+		font-size: 18px;
+		cursor: pointer;
+		text-align: center;
+		background-color: blue;
+
+	}
+	input[type=submit]:hover
+	{
+		opacity: 0.7;
+	}
+
+	input[type=text]{
+
+		width: 550px;
+		height: 50px;
+		animation-name: but_color;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		border-radius: 4px;
+		/*margin-left:250px;*/
+		font-size: 18px;
+		cursor: pointer;
+		text-align: center;
+		border: 2px;
+		box-shadow: 4px 4px 4px;
+
+
+	}
+
+	button
+	{
+		box-sizing: padding-box;
+		width: 150px;
+		height: 50px;
+		animation-name: but_color;
+		animation-duration: 3s;
+		animation-iteration-count: infinite;
+		border-radius: 4px;
+		margin-left:600px;
+		font-size: 18px;
+		cursor: pointer;
+		text-align: center;
+		background-color: blue;
+	}
+
+
+
+	#div1 { -webkit-animation-timing-function: ease;}
+	#div2 {-webkit-animation-timing-function: linear;}
+	#div3 {-webkit-animation-timing-function: ease-in;}
+	#div4 {-webkit-animation-timing-function: ease-in-out;}
+	#div5 {-webkit-animation-timing-function: ease-out;}
+	#div6 {-webkit-animation-timing-function: linear;}
+	#div7 {-webkit-animation-timing-function: ease-in-out;}
+	#div8 {-webkit-animation-timing-function: ease-out;}
+	#div9 {-webkit-animation-timing-function: ease-in;}
+	#div10 {-webkit-animation-timing-function: ease;}
+
+	#div1 {animation-timing-function: ease;}
+	#div2 {animation-timing-function: linear;}
+	#div3 {animation-timing-function: ease-in;}
+	#div4 {animation-timing-function: ease-in-out;}
+	#div5 {animation-timing-function: ease-out;}
+	#div6 {animation-timing-function: linear;}
+	#div7 {animation-timing-function: ease-in-out;}
+	#div8 {animation-timing-function: ease-out;}
+	#div9 {animation-timing-function: ease-in;}
+	#div10 {animation-timing-function: ease;}
+
+	@-webkit-keyframes letter
+	{
+		from {left: 0px;}
+		to {left:470px;}
+	}
+	@keyframes letter
+	{
+		from {left: 0px;}
+		to {left:470px;}
+	}
+
+
+</style>
+</head>
+
+<body>
+
+{% for l in content %}
+
+		<div id="div{{ forloop.counter }}">{{ l }}   </div>
+
+{% endfor %}
+
+
+
+	<form method="POST" action="#">
+
+	{% csrf_token %}
+
+<p align="center"> {{ form }}  </p>
+
+
+	<input type="submit" value="Submit">
+
+</form>
+<p align="center">Score: {{score}}</p>
+<br>
+<button type="button" onClick="window.location='{% url 'easy_second' %}'">Next</button>
+
+<p align="center" id="demo"></p>
+
+<script>
+	function calc()
+	{
+		//{{score}}={{score}}+{{score}};
+		document.getElementById("demo").innerHTML="Score: {{score}}";
+	}
+</script>
+</body>
+</html>
